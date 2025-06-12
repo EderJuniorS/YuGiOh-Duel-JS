@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="src/styles/reset.css">
+
+    <!-- Framework CSS -->
+    <link rel="stylesheet" href="src/styles/buttons.css">
+    <link rel="stylesheet" href="src/styles/containers_and_frames.css">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="src/styles/main.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="src/assets/favicon/Favicon.ico" type="image/x-icon">
+
+    <!-- Titulo da Pagina -->
+    <title>Yu-Gi-Oh!</title>
+</head>
+<body>
+    <audio id="bgm" loop>
+        <source src="src/assets/audios/egyptian_duel.mp3" type="audio/mp3">
+    </audio>
+
+    <!-- Video de fundo da pagina principal -->
+    <div class="bg-video">
+        <video class="video" autoplay loop muted>
+            <source src="src/assets/video/yugi.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <!-- Lado esquerdo da pagina -->
+        <div class="container__left framed-golden-2">
+            <!-- Vitoria e Derota -->
+            <div class="score_box frame">
+                <span id="score_points">Win: 0 | Lose: 0</span>
+            </div>
+
+            <!-- Carta escolhida pelo usuario -->
+            <div class="menu_avatar">
+                <img id="card-image">
+            </div>
+
+            <!-- Detalhes/Informações da carta escolhida -->
+            <div class="card_details frame">
+                <p id="card-name">Selecione</p>
+                <p id="card-type">uma carta</p>
+            </div>
+        </div>
+
+        <!-- Lado direito da pagina -->
+        <div class="container__right">
+            <div class="card-box__container">
+                <!-- Cartas do inimigo -->
+                <div class="card-box framed" id="computer-cards"></div>
+
+                <!-- Carta do usuario vs carta do inimigo -->
+                <div class="card-versus__container">
+                    <div class="versus-top">
+                        <!-- Carta do jogador -->
+                        <div class="card-infield">
+                            <img id="player-field-card" height="180px" width="125px">
+                        </div>
+
+                        <!-- Imagem que simboliza contra "VS" -->
+                        <img height="100px" src="src/assets/icons/millenium2.png">
+
+                        <!-- Carta do inimigo -->
+                        <div class="card-infield">
+                            <img id="computer-field-card" height="180px" width="125px">
+                        </div>
+                    </div>
+
+                    <!-- Botão para ir para o proximo duelo -->
+                    <div class="versus-bottom">
+                        <button id="next-duel" class="rpgui-button" onclick="resetDuel()">Ganhou</button>
+                    </div>
+                </div>
+
+                <!-- Cartas do usuario -->
+                <div class="card-box framed" id="player-cards"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="src/scripts/engine.js"></script>
+</body>
+</html>
