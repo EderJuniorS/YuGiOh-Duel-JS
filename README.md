@@ -2,7 +2,7 @@
 
 Um jogo de cartas baseado em **Yu-Gi-Oh!**, onde você enfrenta a máquina em um duelo estratégico. Escolha suas cartas com sabedoria e prove que você é o verdadeiro **Rei dos Jogos**!  
 
-🔗 **Live Demo:** [Link para GitHub Pages (se disponível)]  
+🔗 **Live Demo:** ![Preview do Jogo](img/Jogo-Pronto-2.png)
 
 ---
 
