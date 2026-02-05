@@ -1,72 +1,80 @@
-# **Yu-Gi-Oh! Duel Simulator** 🃏⚡  
+<div align="center">
+  <h1>🃏 Yu-Gi-Oh! Duel Engine</h1>
+  
+  <p>
+    Simulador de batalhas de cartas baseado em estados, implementando a lógica clássica de 
+    "Jokenpô" (Rock-Paper-Scissors) com interface temática imersiva.
+  </p>
 
-Um jogo de cartas baseado em **Yu-Gi-Oh!**, onde você enfrenta a máquina em um duelo estratégico. Escolha suas cartas com sabedoria e prove que você é o verdadeiro **Rei dos Jogos**!  
+  <img src="https://img.shields.io/github/deployments/EderJuniorS/Yu-Gi-Oh-Duel-Simulator/github-pages?label=Deploy&style=flat-square&logo=github">
+  <img src="https://img.shields.io/github/last-commit/EderJuniorS/Yu-Gi-Oh-Duel-Simulator?style=flat-square&color=blue">
+  
+  <br><br>
 
-🔗 **Live Demo:** ![Preview do Jogo](img/Jogo-Pronto-2.png)
+  <a href="https://ederjuniors.github.io/Yu-Gi-Oh-Duel-Simulator/">
+    <img src="https://img.shields.io/badge/⚔️_Duelar_Agora-Live_Demo-critical?style=for-the-badge" alt="Jogar Agora">
+  </a>
+</div>
 
----
+<br>
 
-## **📌 Descrição**  
+<div align="center">
+  <img src="img/Jogo-Pronto-2.png" alt="Preview do Jogo" width="700px" style="border-radius: 10px; box-shadow: 0px 4px 10px rgba(0,0,0,0.5);">
+</div>
 
-Este projeto é um simulador de duelos de **Yu-Gi-Oh!** desenvolvido em **HTML, CSS e JavaScript**. O jogo segue um sistema de batalha simplificado, inspirado no clássico "Pedra, Papel e Tesoura", mas com cartas icônicas do universo Yu-Gi-Oh!, como:  
+<br>
 
-- **Blue Eyes White Dragon** 🐉  
-- **Dark Magician** 🧙‍♂️  
-- **Exodia** 💀  
+## 📋 Sobre o Projeto
 
-O objetivo é **derrotar o oponente** escolhendo a carta certa em cada rodada. O placar registra suas vitórias e derrotas, tornando o jogo competitivo e divertido!  
+Este projeto foi desenvolvido como parte do bootcamp **Ri Happy - Front-end do Zero (DIO)**. O desafio técnico consistiu em criar uma "Engine de Duelo" onde o jogador enfrenta a CPU.
 
----
+O foco principal foi a manipulação avançada do DOM para atualizar o campo de batalha dinamicamente (Battlefield), gerenciamento de áudio (BGM e SFX) e lógica de comparação de atributos para determinar o estado de vitória, derrota ou empate.
 
-## **🎮 Como Jogar**  
+## 🚀 Funcionalidades & Lógica
 
-1. **Selecione uma carta** do seu deck (5 cartas disponíveis).  
-2. **O computador também escolhe** uma carta aleatória.  
-3. **O resultado do duelo** é calculado com base nas regras de vitória/derrota de cada carta.  
-4. **Atualize o placar** e inicie um novo duelo clicando no botão.  
+- **State Management:** Controle de placar (Scoreboard) e reset de partida sem recarregar a página.
+- **Atributos Circulares:** Implementação da lógica onde *Papel vence Pedra*, *Pedra vence Tesoura* e *Tesoura vence Papel*, mapeados para os atributos das cartas (Exodia, Dark Magician, Blue Eyes).
+- **Interatividade UI/UX:**
+    - Efeitos de *Hover* e *Focus* nas cartas.
+    - Atualização dinâmica de descrições e imagens no painel lateral.
+- **Audio Context:** Reprodução de trilha sonora (BGM) controlada pelo usuário.
 
-🔹 **Ganhe pontos** derrotando o oponente!  
-🔹 **Cuidado!** O computador também pode vencer.  
+## 🛠️ Tecnologias Utilizadas
 
----
+- ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) **Estrutura:** Layout semântico dividindo o campo em "Versus", "Player Hand" e "Computer Hand".
+- ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3) **Estilização:**
+    - Uso de **Flexbox** para alinhamento do tabuleiro.
+    - **Keyframes Animations** para efeitos visuais de batalha.
+    - Cursor personalizado para imersão.
+- ![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black) **Core Logic:**
+    - **Object Oriented approach (Simulated):** Uso de objetos constantes para definir os atributos das cartas (`cardData`).
+    - **Randomization:** Algoritmo `Math.random()` para a IA do computador.
+    - **Event Listeners:** Captura de interação para seleção de cartas.
 
-## **✨ Recursos & Tecnologias**  
+## 📂 Estrutura do Projeto
 
-✅ **Interface estilizada** com tema Yu-Gi-Oh! (efeitos visuais, cursor personalizado e música de fundo épica).  
-✅ **Sistema de batalha** baseado em regras de vantagem (ex: Blue Eyes vence Dark Magician).  
-✅ **Animações simples** ao passar o mouse e selecionar cartas.  
-✅ **Placar dinâmico** para acompanhar suas vitórias e derrotas.  
-✅ **Responsivo** (funciona bem em diferentes tamanhos de tela).  
+```bash
+/
+├── src/
+│   ├── assets/
+│   │   ├── audios/      # BGM e efeitos sonoros
+│   │   ├── icons/       # Favicon e ícones de atributos
+│   │   └── img/         # Sprites das cartas e cenário
+│   ├── css/
+│   │   └── main.css     # Estilização global e reset
+│   └── js/
+│       └── main.js      # Lógica da Engine de Duelo
+├── index.html           # View Principal
+└── README.md            # Documentação
+```
 
-**Tecnologias usadas:**  
-- HTML5, CSS3 (Flexbox, animações)  
-- JavaScript (Lógica do jogo, manipulação do DOM)  
-- Efeitos sonoros e trilha temática  
+## 🏁 Como Executar Localmente
+Clone o repositório:
 
----
+```bash
+git clone https://github.com/EderJuniorS/Yu-Gi-Oh-Duel-Simulator.git
+```
 
-## **📥 Instalação & Execução**  
+Abra o arquivo index.html no seu navegador.
 
-1. Clone o repositório:  
-   ```sh
-   git clone https://github.com/EderJuniorS/Yu-Gi-Oh-Duel-Simulator.git
-   ```
-2. Abra o arquivo `index.html` no navegador.  
-
----
-
-## **🔄 Possíveis Melhorias**  
-
-🔸 Adicionar mais cartas e regras complexas.  
-🔸 Implementar um sistema de decks personalizáveis.  
-🔸 Adicionar efeitos especiais de cartas.  
-
----
-
-**🎴 Prepare-se para o duelo!** 🎴  
-
-Se gostou do projeto, deixe uma ⭐ no repositório!  
-
----  
-
-Espero que goste do jogo! **Que o poder do Millennium Puzzle esteja com você!** 🔺
+<div align="center"> Desenvolvido por <a href="https://www.linkedin.com/in/ederjuniormatossilva">Éder Junior</a> durante o Bootcamp DIO. </div>
