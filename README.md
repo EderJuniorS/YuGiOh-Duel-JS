@@ -11,7 +11,7 @@
   
   <br><br>
 
-  <a href="https://ederjuniors.github.io/Yu-Gi-Oh-Duel-Simulator/">
+  <a href="https://ederjuniors.github.io/YuGiOh-Duel-JS/">
     <img src="https://img.shields.io/badge/⚔️_Duelar_Agora-Live_Demo-critical?style=for-the-badge" alt="Jogar Agora">
   </a>
 </div>
@@ -72,7 +72,7 @@ O foco principal foi a manipulação avançada do DOM para atualizar o campo de 
 Clone o repositório:
 
 ```bash
-git clone https://github.com/EderJuniorS/Yu-Gi-Oh-Duel-Simulator.git
+git clone https://github.com/EderJuniorS/YuGiOh-Duel-JS.git
 ```
 
 Abra o arquivo index.html no seu navegador.
